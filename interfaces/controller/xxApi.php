@@ -7,7 +7,7 @@ class xxApi {
     //接口层
     public function doSome(){
         //调用防腐层
-        $openidOrderDO = $transferAdapter.orderDetail2openidOrderDO($orderDetail);//调用防腐层（适配层，DO转义）
+        $openidOrderDO = $transferAdapter.orderDetail2openidOrderDO($orderDetail);//调用防腐层（适配层，DO转义）---  转换应该挪到 领域服务更合理
         $openOrderServer.handleOrderMessage($openidOrderDO);//调用  应用服务层 （传领域对象到 应用服务）
     }
 
