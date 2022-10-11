@@ -1,4 +1,8 @@
 <?php
+/**
+ * 对外提供（Restful）接口
+ * Class xxApi
+ */
 class xxApi {
     //接口层
     public function doSome(){

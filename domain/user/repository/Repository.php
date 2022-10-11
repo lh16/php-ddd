@@ -1,6 +1,6 @@
 <?php
 /**
- * 基础仓储接口
+ * 基础仓储接口     仓储层也称领域资源库
  *
  * 在六边形架构中这个叫 暴露 端口，端口适配器就是指  具体的实现类 xxRepositoryImpl,这样能够经过依赖注入（Dependency Injection）轻松实现Service层的 操作
  */

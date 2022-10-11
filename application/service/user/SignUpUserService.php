@@ -1,4 +1,8 @@
 <?php
+/**
+ * 应用服务，非核心服务
+ * Class SignUpUserService
+ */
 //应用层不包含业务逻辑。对外为展现层提供各种应用功能（包括查询或命令），对内调用领域层（领域对象或领域服务）
 class SignUpUserService
 {
