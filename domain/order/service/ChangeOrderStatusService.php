@@ -9,7 +9,7 @@ class ChangeOrderStatusService
         $this->orderRepository = $orderRepository;
     }
 
-    public function execute($anOrderId, $anOrderStatus)//是不是也可以直接写在 order聚合根，因为都输属于 模型的操作
+    public function execute($anOrderId, $anOrderStatus)//是不是也可以直接写在 order聚合根，因为都输属于 模型的操作.=》应该是写在聚合根内 反而更好
     {
         // Fetch an order from the database
         $anOrder = $this->orderRepository->find($anOrderId);

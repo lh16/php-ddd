@@ -3,7 +3,7 @@
  * 应用服务，非核心服务
  * Class SignUpUserService
  */
-//应用层不包含业务逻辑。对外为展现层提供各种应用功能（包括查询或命令），对内调用领域层（领域对象或领域服务）
+//应用层不包含业务逻辑（比如 价格加一减一，价格计算啥的）。对外为展现层提供各种应用功能（包括查询或命令），对内调用领域层（领域对象或领域服务）
 class SignUpUserService
 {
     private $userRepository;
@@ -19,12 +19,16 @@ class SignUpUserService
         if ($user) {
             throw new UserAlreadyExistsException();
         }*/
-        $user = new User(//接口层应该直接 调用适配层 转完 为DO 后传到 应用服务层
+        $user = new User(
             $this->userRepository->nextIdentity(),
             $request->email,
             $request->password
-        );//---- 这是一个 聚合根 领域对象
-        $this->userRepository->add($user);//其实这里是不是就是应该传 领域模型参数?  对的，因为仓储实现层 统一 为接收领域模型对象（save）或者参数（byId）
+        ); //---- 这是一个 聚合根 领域对象DO，这里使用  防腐层 对DTO数据 进行一次转换为 DO 是不是更合理，类似如下更改：
+        //$openidOrderDO = $transferAdapter.orderDetail2openidOrderDO($orderDetail);//调用防腐层（适配层，DO转义）---  数据转换应该挪到 领域服务作更合理（如下面）
+        //$this->orderRepository->save($openidOrderDO);
+
+
+        $this->userRepository->save($user);//其实这里是不是就是应该传 领域模型参数?  对的，因为仓储实现层 统一 为接收领域模型对象（save）或者参数（byId）
         return new SignUpUserResponse($user);
     }
 }

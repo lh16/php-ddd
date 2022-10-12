@@ -16,7 +16,7 @@ class SignUp
         $this->passwordHashing = $passwordHashing;
     }
 
-    public function execute($aUsername, $aPassword)//校验用户名和密码是否合法
+    public function execute($aUsername, $aPassword)//校验用户名和密码是否合法 -》这个比较适合写在 领域服务
     {
         if (!$this->userRepository->has($aUsername)) {
             throw new InvalidArgumentException(
