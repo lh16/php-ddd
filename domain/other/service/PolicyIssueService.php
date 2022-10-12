@@ -1,4 +1,5 @@
 <?php
+//工厂
 /*
 public class PolicyIssueService {
 public Insured createInsuredFrom(PolicyProduct product, BillingInfo billingInfo, ContactAddress contactAddress) {

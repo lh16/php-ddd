@@ -1,9 +1,10 @@
 <?php
+//工厂
 /*
-//代表保险单的 Aggregate
+//Policy 代表保险单的 Aggregate
 public class Policy {
     //创建 ClaimApplication 的工厂方法
-public ClaimApplication applyClaimWith(Accident accident) {
+public ClaimApplication applyClaimWith(Accident accident) {//定义一个函数，对原聚合根输入一个对象，输出新的聚合根。通过装配创建领域对象
 
 }
 }
