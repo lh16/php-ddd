@@ -47,7 +47,7 @@ class User {//聚合根
         $this->address = new Address($province,$city,$county);//vo
     }
 
-    protected function publishEvent()//发布新用户注册事件
+    protected function publishEvent()//发布新用户注册事件,用于对象中的某个动作调用
     {
         DomainEventPublisher::instance()->publish(
             new UserRegistered($this->userId)

@@ -1,6 +1,7 @@
 <?php
 //工厂
 /*
+//新保单承保
 public class PolicyIssueService {
 public Insured createInsuredFrom(PolicyProduct product, BillingInfo billingInfo, ContactAddress contactAddress) {
 //……

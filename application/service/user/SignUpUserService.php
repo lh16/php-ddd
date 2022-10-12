@@ -23,8 +23,8 @@ class SignUpUserService
             $this->userRepository->nextIdentity(),
             $request->email,
             $request->password
-        );
-        $this->userRepository->add($user);//其实这里是不是就是应该传 领域模型参数?  对的，因为仓储实现层 统一 为接收领域模型对象或者参数
+        );//---- 这是一个 聚合根 领域对象
+        $this->userRepository->add($user);//其实这里是不是就是应该传 领域模型参数?  对的，因为仓储实现层 统一 为接收领域模型对象（save）或者参数（byId）
         return new SignUpUserResponse($user);
     }
 }
