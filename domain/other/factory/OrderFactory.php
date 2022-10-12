@@ -1,4 +1,5 @@
 <?php
+//在DDD中，聚合根通常不会引用其他服务类
 /*
 @Component
 public class OrderFactory {
