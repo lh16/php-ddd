@@ -22,4 +22,7 @@ public OrderFactory(OrderIdGenerator idGenerator) {
 
 创建Order，包含用户选择的Product及其数量，OrderId必须调用第三方的OrderIdGenerator获取
 这里的OrderIdGenerator是具有服务性质的对象(即下文中的领域服务)，在DDD中，聚合根通常不会引用其他服务类。另外，调用OrderIdGenerator生成ID应该是一个业务细节，如前文所讲，这种细节不应该放在ApplicationService中。此时，可以通过Factory类来完成Order的创建：
+
+https://zhuanlan.zhihu.com/p/503583231
+工厂（Factories），主要用来创建聚合根，目前架构实践中一般采用IOC容器来实现工厂的功能。
  */

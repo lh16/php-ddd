@@ -21,7 +21,7 @@ class xxApi {
         );
 
         $userRepository = new RedisUserRepository($redisClient);
-        $signUp = new SignUpUserService($userRepository);//调用服务层
+        $signUp = new SignUpUserService($userRepository);//下面需要调用应用服务层
         $signUp->execute($signUpUserRequest);//---传DTO到 应用服务。 =》应该是要调用防腐层将DTO 转为 DO后转入 应用服务
        /* $signUp->execute(new SignUpUserRequest(
             'user@example.com',

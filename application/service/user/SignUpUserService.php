@@ -10,7 +10,7 @@ class SignUpUserService
 
     public function __construct(UserRepository $userRepository)
     {
-        $this->userRepository = $userRepository;
+        $this->userRepository = $userRepository;//仓储部分可以考虑IOC，  比如这里ioc系统启动时就注册   IocCore.Instance.Register({'Repository','userRepository'})进行Register bind 来实现解耦 https://zhuanlan.zhihu.com/p/503583231
     }
     //用邮箱新注册用户
     public function execute(SignUpUserRequest $request)//接收  数据传输对象（ DTO）
