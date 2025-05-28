@@ -3,6 +3,7 @@
 ## 四层架构
 ![img.png](resource/img.png)
 
+![c9240f2a18d9fc707c313722ecae8875.jpeg](resource%2Fc9240f2a18d9fc707c313722ecae8875.jpeg)
 ## 理解层的作用
 ````
  // 服务 A（订单服务）
