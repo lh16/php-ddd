@@ -5,21 +5,22 @@
 
 ## 理解层的作用
 ````
-// 服务 A（订单服务）
-order-service/
-├── domain/        # 领域层（定义接口）
-├── application/   # 应用层
-└── infrastructure/
-├── jpa/      # 实现领域层的持久化接口
-└── kafka/    # 消息生产实现
+ // 服务 A（订单服务）
+   order-service/
+     ├── domain/        # 领域层（定义接口）
+     ├── application/   # 应用层
+     └── infrastructure/
+         ├── jpa/      # 实现领域层的持久化接口
+         └── kafka/    # 消息生产实现
 
-// 服务 B（用户服务）
-user-service/
-├── domain/        # 领域层（定义接口）
-├── application/
-└── infrastructure/
-├── mongodb/  # 实现领域层的持久化接口
-└── redis/     # 缓存实现
+   // 服务 B（用户服务）
+   user-service/
+     ├── domain/        # 领域层（定义接口）
+     ├── application/
+     └── infrastructure/
+         ├── mongodb/  # 实现领域层的持久化接口
+         └── redis/     # 缓存实现
+
 ````
 
 ## 微服务架构中的常见实践
