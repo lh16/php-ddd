@@ -1,5 +1,7 @@
 # php-ddd
 
+https://en.wikipedia.org/wiki/Domain-driven_design
+
 ## 四层架构
 ![img.png](resource/img.png)
 
