@@ -7,6 +7,8 @@ https://github.com/wmaozhi/Domain-Driven-Design-zh/blob/master/docs/README.md
 https://en.wikipedia.org/wiki/Domain-driven_design
 
 ## 四层架构
+![img_2.png](resource%2Fimg_2.png)
+
 ![img.png](resource/img.png)
 
 ![c9240f2a18d9fc707c313722ecae8875.jpeg](resource%2Fc9240f2a18d9fc707c313722ecae8875.jpeg)
